@@ -14,11 +14,25 @@ public class JUNITStack extends TestCase {
 		assertTrue(s1.isEmty());
 	}
 	
-	public void push() {
+	public void testPushElmTOTop() {
 		Stack s2 = new Stack();
-		s2.push(1);
+		assertFalse(s2.isFull());
+		s2.push(new Integer(1));
 		s2.top();
-		assertEquals(1, s2.top());
+		int tope = (Integer)s2.top();
+		assertEquals(1, tope);
 		
 	}
+	
+	public void  testLastInFirstOut(){
+		Stack s3 = new Stack();
+		s3.push(1);
+		s3.push(2);
+		s3.push(3);
+		
+		s3.pop(s3);
+		assertTrue(s3.isEmty());
+	}
+	
+
 }

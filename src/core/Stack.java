@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Stack implements IStack {
 private ArrayList<Object> a = new ArrayList<Object>();
-private Object t;
+
 	@Override
 	public boolean isEmty() {
 		return true;
@@ -20,6 +20,7 @@ private Object t;
 
 	@Override
 	public boolean isFull() {
+		
 		return false;
 	}
 
@@ -34,4 +35,12 @@ private Object t;
 		
 		return a.get(getSize()-1);
 	}
+
+	@Override
+	public Object pop(Object elm) {
+		return this.a.remove(elm);
+	}
+
+	
+
 }
